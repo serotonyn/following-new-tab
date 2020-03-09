@@ -4,6 +4,7 @@
  */
 
 /* eslint-disable no-var, @typescript-eslint/no-unused-vars */
+/* eslint-disable no-console */
 
 // New tab app props
 var bList;

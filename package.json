@@ -8,14 +8,15 @@
   "homepage": "https://github.com/MaxMilton/new-tab",
   "scripts": {
     "FIXME__lint:css": "stylelint **/*.{css,html,js,md,svelte,svg,ts} --report-needless-disables",
-    "build": "NODE_ENV=production rollup --config",
+    "build": "SET NODE_ENV=production && rollup --config",
+    "build:linux": "NODE_ENV=production rollup --config",
+    "prebuild": "node prebuild.js",
     "dev": "NODE_ENV=development rollup --config --watch",
     "lint": "yarn lint:md && yarn lint:css && yarn lint:js && yarn lint:types",
     "lint:css": "stylelint **/*.{css,html,js,md,svelte,svg,ts}",
     "lint:js": "eslint --ext html,js,md,mjs,svelte,svg,ts .",
     "lint:md": "remark --frail --quiet .",
     "lint:types": "tsc --noEmit --allowJs --checkJs",
-    "prebuild": "rm -rf dist && mkdir dist && cp icon* dist",
     "test": "jest --notify --watch",
     "test-ci": "jest --ci --coverage",
     "test-e2e": "jest --ci --config test/e2e/jest.config.js"

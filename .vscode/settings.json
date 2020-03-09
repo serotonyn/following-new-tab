@@ -4,7 +4,7 @@
     "source.fixAll": true
   },
   "editor.formatOnSave": true,
-  "eslint.enable": true,
+  "eslint.enable": false,
   "files.associations": {
     "*.css": "scss",
     "*.svelte": "html"
@@ -12,5 +12,8 @@
   "javascript.implicitProjectConfig.checkJs": true,
   // "scss.validate": false,
   "stylelint.autoFixOnSave": true,
-  "stylelint.enable": true
+  "stylelint.enable": true,
+  "files.exclude": {
+    "node_modules": true
+  }
 }
